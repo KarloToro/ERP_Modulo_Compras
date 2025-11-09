@@ -36,3 +36,43 @@ class Cliente(db.Model): #Todo OK segun BD
         """Check hashed password."""
         return bcrypt.check_password_hash(self.contraseña, password)
 
+"""
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    # Atributo de clase
+    tipo = "Desconocido"
+    
+    def __init__(self, nombre):
+        # Atributo de instancia
+        self.nombre = nombre
+    
+    @abstractmethod
+    def hacer_sonido(self):
+        pass
+    
+    def dormir(self):
+        print(f"{self.nombre} está durmiendo.")
+
+class Perro(Animal):
+    def __init__(self, nombre, raza):
+        super().__init__(nombre)
+        self.raza = raza
+    
+    def hacer_sonido(self):
+        print(f"{self.nombre} dice: Guau!")
+
+class Gato(Animal):
+    def __init__(self, nombre, color):
+        super().__init__(nombre)
+        self.color = color
+    
+    def hacer_sonido(self):
+        print(f"{self.nombre} dice: Miau!")
+
+# Instanciamos los objetos
+perro = Perro("Rex", "Pastor Alemán")
+gato = Gato("Luna", "Blanco")
+
+
+"""
